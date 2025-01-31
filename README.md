@@ -2,6 +2,9 @@
 
 This is my personal neovim config using package manager Lazy vim. It has all my keymaps, all my plugins that i am currently using.
 
+## Requirements
+Neovim >= 0.9.0 (needs to be built with LuaJIT)
+
 ## instalation
 
 If you wanna try this config out you can just clone this repo inside
