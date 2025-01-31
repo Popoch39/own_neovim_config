@@ -12,7 +12,7 @@ mv ~/.config/nvim{,.bak}
 # optional but recommended
 mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}# required
+mv ~/.cache/nvim{,.bak}
 mv ~/.config/nvim{,.bak}
 
 # optional but recommended
