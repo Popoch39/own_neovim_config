@@ -7,7 +7,7 @@ return {
     config = function()
       local manager = require("buffer_manager.ui");
       vim.keymap.set("n", "<leader>bm", manager.toggle_quick_menu, {})
-      vim.keymap.set("n", "bb", manager.nav_prev, {})
+      vim.keymap.set("n", "<leader>bb", "<cmd>b#<CR>", { noremap = true, silent = true })
     end
   }
 }
