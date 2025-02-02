@@ -11,7 +11,6 @@ return {
 						"--unsafe",
 						"--formatter-enabled=true",
 						"--organize-imports-enabled=true",
-						"--skip-errors",
 						"--stdin-file-path=$FILENAME",
 					}),
 				},

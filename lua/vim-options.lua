@@ -40,6 +40,7 @@ vim.opt.formatoptions:append({ "r" })
 vim.g.moonflyTransparent = true
 vim.opt.clipboard = "unnamedplus"
 
+vim.lsp.inlay_hint.enable(true)
 
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = false })
 vim.api.nvim_create_autocmd('TextYankPost', {

@@ -1,12 +1,28 @@
 return {
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       variant = "moon"
+  --     })
+  --     vim.cmd("colorscheme rose-pine")
+  --   end
+  -- }
+
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
     config = function()
-      require("rose-pine").setup({
-        variant = "moon"
+      require("catppuccin").setup({
+        flavour = "mocha",
+        background = {
+          dark = "mocha",
+          light = "mocha"
+        },
       })
-      vim.cmd("colorscheme rose-pine")
+      vim.cmd.colorscheme "catppuccin"
     end
   }
 
