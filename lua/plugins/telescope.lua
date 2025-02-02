@@ -8,6 +8,15 @@ return {
 			telescope.setup({
 				defaults = {
 					file_ignore_patterns = { "node_modules/.*" },
+          find_command = { "fd", "--type", "f", "--hidden", "--no-ignore" },
+          vimgrep_arguments = {
+            "rg",
+            "--hidden",
+            "--no-ignore",
+            "--with-filename",
+            "--line-number",
+            "--column"
+        }
 				}
 			})
       vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
