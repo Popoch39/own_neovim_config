@@ -12,7 +12,8 @@ return {
         ensure_installed = {
           "lua_ls",
           "ts_ls",
-          "intelephense"
+          "intelephense",
+          "gopls"
         }
       })
     end
@@ -32,6 +33,10 @@ return {
       lspconfig.intelephense.setup({
         capabilities = capabilities,
       })
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+
 
 
       lspconfig.html.setup({
