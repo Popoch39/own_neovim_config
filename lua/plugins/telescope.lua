@@ -7,7 +7,7 @@ return {
       local builtin = require("telescope.builtin")
 			telescope.setup({
 				defaults = {
-					file_ignore_patterns = { "node_modules/.*" },
+					file_ignore_patterns = { "node_modules/.*", "vendor/.*" },
           find_command = { "fd", "--type", "f", "--hidden", "--no-ignore" },
           vimgrep_arguments = {
             "rg",
@@ -21,6 +21,7 @@ return {
 			})
       vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 			vim.keymap.set('n', '<leader>fw', builtin.live_grep, {})
+      vim.keymap.set('n', '<leader>bm', ":Telescope buffers<CR>")
 		end
 	},
 	{
