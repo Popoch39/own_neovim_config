@@ -1,7 +1,20 @@
 return {
   {
     "folke/trouble.nvim",
-    opts = {},
+     opts = {
+      position = "bottom", -- position de la fenêtre Trouble
+      height = 10, -- hauteur de la fenêtre
+      mode = "document_diagnostics", -- montre les diagnostics du document actuel par défaut
+      fold_open = "", -- icône pour les sections ouvertes
+      fold_closed = "", -- icône pour les sections fermées
+      action_keys = { -- personnalisation des touches
+        next = "j", -- aller au problème suivant
+        previous = "k", -- aller au problème précédent
+        close = "q", -- fermer la fenêtre
+        jump = "<cr>", -- aller à l'emplacement du problème
+        toggle_fold = "za", -- plier/déplier une section
+      },
+    },
     cmd = "Trouble",
     keys = {
       {
