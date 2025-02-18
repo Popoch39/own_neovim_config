@@ -1,5 +1,12 @@
 return {
   {
+    -- lsp loading infos !
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
+  },
+  {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
