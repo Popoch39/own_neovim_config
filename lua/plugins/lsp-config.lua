@@ -20,7 +20,8 @@ return {
           "lua_ls",
           "ts_ls",
           "intelephense",
-          "gopls"
+          "gopls",
+          "clangd"
         }
       })
     end
@@ -41,6 +42,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.clangd.setup({
         capabilities = capabilities,
       })
 

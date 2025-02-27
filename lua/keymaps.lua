@@ -5,7 +5,6 @@ vim.keymap.set("n", "tp", vim.diagnostic.goto_prev, { desc = "Previous Diagnosti
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {});
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {});
 
-
 --TODO: test todo find 
 vim.keymap.set("n", "<leader>td", ":TodoTelescope<CR>", {})
 
