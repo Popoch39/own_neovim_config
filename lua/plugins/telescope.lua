@@ -16,7 +16,10 @@ return {
             "--no-ignore",
             "--with-filename",
             "--line-number",
-            "--column"
+            "--column",
+            "--fixed-strings",             -- Désactive les regex pour une recherche textuelle exacte
+            "--ignore-case",               -- Rend la recherche insensible à la casse (optionnel)
+            "--glob", "!{node_modules,vendor}/*" -- Exclut ces dossiers
           }
         }
       })
