@@ -20,8 +20,6 @@ return {
           "lua_ls",
           "ts_ls",
           "intelephense",
-          "gopls",
-          "clangd"
         }
       })
     end
@@ -47,9 +45,32 @@ return {
       lspconfig.clangd.setup({
         capabilities = capabilities,
       })
-
-
-
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
+        settings = {
+          css = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            }
+          },
+          scss = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            }
+          },
+          less = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            }
+          },
+        },
+      })
       lspconfig.html.setup({
         capabilities = capabilities
       })
