@@ -12,6 +12,7 @@ return {
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
+        ensure_installed = { "blade", "php", "html" },
       })
     end,
   },

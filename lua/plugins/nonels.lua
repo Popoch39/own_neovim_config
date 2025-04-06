@@ -39,13 +39,15 @@ return {
           null_ls.builtins.code_actions.eslint_d,
           null_ls.builtins.formatting.prettier,  -- Formattage
           null_ls.builtins.diagnostics.tsc,      -- Vérifie les types TypeScript
+
+          null_ls.builtins.formatting.phpstan,
         },
       })
 
       vim.cmd([[
         augroup FormatAutogroup
           autocmd!
-          autocmd BufWritePre *.ts,*.tsx lua vim.lsp.buf.format()
+          autocmd BufWritePre *.ts,*.tsx,*.php lua vim.lsp.buf.format()
         augroup END
       ]])
 

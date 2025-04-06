@@ -15,7 +15,7 @@ return {
 
       local keymap = vim.keymap.set
       keymap("n", "<leader>a", function() mark.add_file() end, { desc = "Harpoon: Marquer la ligne actuelle" })
-      keymap("n", "<leader>cc", function() mark.clear_all() end, { desc = "Harpoon: Supprimer toutes les marques" })
+      keymap("n", "<leader>da", function() mark.clear_all() end, { desc = "Harpoon: Supprimer toutes les marques" })
       keymap("n", "<leader>z", function() mark.rm_file() end, { desc = "Harpoon: Supprimer la marques" })
 
       keymap("n", "<C-e>", function() ui.toggle_quick_menu() end, { desc = "Harpoon: Ouvrir le menu" })

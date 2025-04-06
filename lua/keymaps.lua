@@ -19,3 +19,6 @@ vim.keymap.set("v", "<leader>ls", function()
   local log_statement = string.format("console.log('%s : ', %s);", word, word)
   vim.api.nvim_put({ log_statement }, "l", true, true)
 end, { desc = "Ajoute un console.log() autour de la sélection" })
+
+vim.keymap.set("n", "<leader>tc", ":Augment chat-toggle<CR>", {  desc = " ai chat", silent = true })
+vim.keymap.set({"n", "v"}, "<leader>cc", ":Augment chat<CR>", {  desc = " prompt ai", silent = true })
