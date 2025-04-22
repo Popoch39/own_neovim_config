@@ -6,6 +6,7 @@ return {
     config = function()
       local telescope = require("telescope")
       local builtin = require("telescope.builtin")
+      local open_with_trouble = require("trouble.sources.telescope").open
       telescope.setup({
         defaults = {
           file_ignore_patterns = { "node_modules/.*", "vendor/.*" },
@@ -17,10 +18,10 @@ return {
             "--with-filename",
             "--line-number",
             "--column",
-            "--fixed-strings",             -- Désactive les regex pour une recherche textuelle exacte
-            "--ignore-case",               -- Rend la recherche insensible à la casse (optionnel)
+            "--fixed-strings",                   -- Désactive les regex pour une recherche textuelle exacte
+            "--ignore-case",                     -- Rend la recherche insensible à la casse (optionnel)
             "--glob", "!{node_modules,vendor}/*" -- Exclut ces dossiers
-          }
+          },
         }
       })
       vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
